@@ -1,0 +1,65 @@
+{
+	"locomotive": {
+	"planks": [
+		{ "wheel": 0 },
+		{ "wheel": 9 },
+		{ "wheel": 3 }
+	]
+},
+	"wagons": [
+		{
+		"wagon": {
+	"planks": [
+		{ "wheel": 4 },
+		{ "wheel": 9 },
+		{ "wheel": 0 },
+		{ "wheel": 5 },
+		{ "wheel": 13 },
+		{ "wheel": 0 },
+		{ "wheel": 0 },
+		{ "wheel": 0 },
+		{ "wheel": 0 },
+		{ "wheel": 26 },
+		{ "wheel": 11 },
+		{ "wheel": 0 },
+		{ "wheel": 5 },
+		{ "wheel": 18 },
+		{ "wheel": 2 },
+		{ "wheel": 0 },
+		{ "wheel": 0 },
+		{ "wheel": 5 },
+		{ "wheel": 7 },
+		{ "wheel": 0 },
+		{ "wheel": 4 },
+		{ "wheel": 0 },
+		{ "wheel": 0 },
+		{ "wheel": 10 }
+	]
+},
+		"passengerCount": 3
+	},
+		{
+		"wagon": {
+	"planks": [
+		{ "wheel": 3 },
+		{ "wheel": 0 },
+		{ "wheel": 5 },
+		{ "wheel": 9 },
+		{ "wheel": 1 },
+		{ "wheel": 3 },
+		{ "wheel": 0 }
+	]
+},
+		"passengerCount": 12
+	},
+		{
+		"wagon": {
+	"planks": [
+		{ "wheel": 0 },
+		{ "wheel": 3 }
+	]
+},
+		"passengerCount": 1
+	}
+	]
+}
