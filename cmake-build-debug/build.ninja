@@ -73,6 +73,12 @@ build CMakeFiles/BoltzmanSamplers_v2.dir/train_saver.cpp.obj: CXX_COMPILER__Bolt
   OBJECT_DIR = CMakeFiles\BoltzmanSamplers_v2.dir
   OBJECT_FILE_DIR = CMakeFiles\BoltzmanSamplers_v2.dir
 
+build CMakeFiles/BoltzmanSamplers_v2.dir/train_researcher.cpp.obj: CXX_COMPILER__BoltzmanSamplers_v2_unscanned_Debug C$:/Users/Cebulka/Desktop/9sem/MPA/BoltzmanSamplers_v2/train_researcher.cpp || cmake_object_order_depends_target_BoltzmanSamplers_v2
+  DEP_FILE = CMakeFiles\BoltzmanSamplers_v2.dir\train_researcher.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\BoltzmanSamplers_v2.dir
+  OBJECT_FILE_DIR = CMakeFiles\BoltzmanSamplers_v2.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target BoltzmanSamplers_v2
@@ -81,7 +87,7 @@ build CMakeFiles/BoltzmanSamplers_v2.dir/train_saver.cpp.obj: CXX_COMPILER__Bolt
 #############################################
 # Link the executable BoltzmanSamplers_v2.exe
 
-build BoltzmanSamplers_v2.exe: CXX_EXECUTABLE_LINKER__BoltzmanSamplers_v2_Debug CMakeFiles/BoltzmanSamplers_v2.dir/main.cpp.obj CMakeFiles/BoltzmanSamplers_v2.dir/alg.cpp.obj CMakeFiles/BoltzmanSamplers_v2.dir/combinatorial_train.cpp.obj CMakeFiles/BoltzmanSamplers_v2.dir/train_saver.cpp.obj
+build BoltzmanSamplers_v2.exe: CXX_EXECUTABLE_LINKER__BoltzmanSamplers_v2_Debug CMakeFiles/BoltzmanSamplers_v2.dir/main.cpp.obj CMakeFiles/BoltzmanSamplers_v2.dir/alg.cpp.obj CMakeFiles/BoltzmanSamplers_v2.dir/combinatorial_train.cpp.obj CMakeFiles/BoltzmanSamplers_v2.dir/train_saver.cpp.obj CMakeFiles/BoltzmanSamplers_v2.dir/train_researcher.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\BoltzmanSamplers_v2.dir

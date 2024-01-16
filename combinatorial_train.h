@@ -37,7 +37,7 @@ struct WagonWithPassengers{
 struct Train{
     Wagon* locomotive;
     std::vector<WagonWithPassengers*> wagons;
-    Train(double x);
+    Train(double x, int minLen);
     ~Train();
 };
 

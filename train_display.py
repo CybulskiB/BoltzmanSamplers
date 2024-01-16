@@ -111,5 +111,6 @@ def draw_train(train):
 if __name__ == "__main__":
     filepath_1 = 'cmake-build-debug/Trains/Train_one.json'
     filepath_2 = 'cmake-build-debug/Trains/Train_two.json'
+    filepath_3 = 'cmake-build-debug/Trains/Train_three.json'
     train = read_train(filepath_1)
     draw_train(train)

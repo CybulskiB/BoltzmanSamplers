@@ -9,4 +9,6 @@ add_executable(BoltzmanSamplers_v2 main.cpp
         combinatorial_train.cpp
         combinatorial_train.h
         train_saver.cpp
-        train_saver.h)
+        train_saver.h
+        train_researcher.cpp
+        train_researcher.h)
