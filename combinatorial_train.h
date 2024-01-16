@@ -22,8 +22,8 @@ struct Wagon{
 };
 
 struct Passenger{
-    int head; // Cyc(Z)
-    int belly; // Cyc(Z)
+    int head; 
+    int belly; 
     Passenger(double x);
 };
 

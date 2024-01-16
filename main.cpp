@@ -1,6 +1,7 @@
 #include <iostream>
 #include "combinatorial_train.h"
 #include "train_saver.h"
+#include "alg.h"
 
 void printWagon(Wagon* w){
     for (Plank* p: w->planks){
@@ -22,9 +23,12 @@ void printTrain(Train* t){
 }
 
 int main() {
-    Train* t = new Train(0.1);
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+    Train *t = new Train(0.9);
     printTrain(t);
-    saveTrainToJson(t, "Trains/Train_one.json");
+    std::string filename_1 = "Trains/Train_one.json";
+    std::string filename_2 = "Trains/Train_two.json";
+    saveTrainToJson(t, filename_2);
 
     delete t;
     return 0;

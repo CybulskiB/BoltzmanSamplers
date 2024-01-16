@@ -19,10 +19,31 @@ std::string wagonToJson(Wagon* wagon) {
     return ss.str();
 }
 
+std::string passengerToJson(Passenger* passenger) {
+    std::ostringstream ss;
+    ss << "{ \"head\": " << passenger->head << ", \"belly\": " << passenger->belly << " }";
+    return ss.str();
+}
+
+std::string passengersToJson(std::vector<Passenger*> passengers) {
+    std::ostringstream ss;
+    ss << "[\n";
+    for (size_t i = 0; i < passengers.size(); ++i) {
+        ss << "\t\t\t" << passengerToJson(passengers[i]);
+        if (i != passengers.size() - 1) {
+            ss << ",";
+        }
+        ss << "\n";
+    }
+    ss << "\t\t]";
+    return ss.str();
+}
+
 std::string wagonWithPassengersToJson(WagonWithPassengers* wagonWithPassengers) {
     std::ostringstream ss;
     ss << "{\n\t\t\"wagon\": " << wagonToJson(wagonWithPassengers->wagon) 
-       << ",\n\t\t\"passengerCount\": " << wagonWithPassengers->Passengers.size() 
+       << ",\n\t\t\"passengerCount\": " << wagonWithPassengers->Passengers.size()
+       << ",\n\t\t\"passengers\": " << passengersToJson(wagonWithPassengers->Passengers)
        << "\n\t}";
     return ss.str();
 }

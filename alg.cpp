@@ -2,6 +2,7 @@
 // Created by Cebulka on 13.01.2024.
 //
 #include <random>
+#include <iostream>
 #include "alg.h"
 
 
@@ -39,7 +40,7 @@ bool generateBernoulli(double x){
 }
 
 unsigned int generateUniqueSeed(){
-    return static_cast<unsigned int>(std::time(nullptr)) + lastSeed++;
+    return static_cast<unsigned int>(std::time(nullptr)) + lastSeed;
 }
 
 int generateCycle(double x){
@@ -61,7 +62,7 @@ int generateCycle(double x){
 int generateSet(double x){
     RandomNumberGenerator rng(generateUniqueSeed());
 
-    double U = rng.next();
+    double U = ((double) rand() / (RAND_MAX)); //  rng.next();
     double p_k = exp(-x);
     double S = p_k;
     int k = 0;
@@ -71,6 +72,7 @@ int generateSet(double x){
         p_k =  x* p_k/k;
         S += p_k;
     }
+    //std::cout << U << " " << k << " " << S << " " << p_k << "\n";
 
     return k;
 

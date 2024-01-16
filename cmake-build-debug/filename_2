@@ -1,0 +1,32 @@
+{
+	"locomotive": {
+	"planks": [
+		{ "wheel": 0 },
+		{ "wheel": 0 }
+	]
+},
+	"wagons": [
+		{
+		"wagon": {
+	"planks": [
+		{ "wheel": 1 },
+		{ "wheel": 1 }
+	]
+},
+		"passengerCount": 0,
+		"passengers": [
+		]
+	},
+		{
+		"wagon": {
+	"planks": [
+		{ "wheel": 0 },
+		{ "wheel": 1 }
+	]
+},
+		"passengerCount": 0,
+		"passengers": [
+		]
+	}
+	]
+}

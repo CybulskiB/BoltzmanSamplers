@@ -53,7 +53,7 @@ WagonWithPassengers::~WagonWithPassengers(){
 Train::Train(double x) {
     this->locomotive = new Wagon(x);
 
-    int len = generateSequence((TrainLengthGF(x)),1);
+    int len = generateSequence((TrainLengthGF(x)),2);
 
     for (int i = 0; i < len ; i ++){
         this->wagons.push_back(new WagonWithPassengers(x));

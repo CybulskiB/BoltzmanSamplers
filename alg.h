@@ -13,7 +13,6 @@
 class RandomNumberGenerator {
 public:
     RandomNumberGenerator(unsigned int seed) : seed(seed) {
-        srand(seed);
     }
 
     double next() {
