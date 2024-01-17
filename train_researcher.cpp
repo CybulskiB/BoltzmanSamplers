@@ -26,15 +26,18 @@ ElementCounts countElements(Train* t) {
     return counts;
 }
 
-
 void process(double x, int repeat, const std::string& filepath, int train_min_len){
     std::string filepath_with_x = filepath + std::to_string(x) + ".csv";
     std::ofstream outfile(filepath_with_x, std::ios_base::app);
     outfile << "Planks;Wagons;Wheels;Passengers;Repeat;MinLenTrain\n";
+    outfile.close();
     for (int i = 0; i < repeat; ++i) {
+        std::string filepath_with_x = filepath + std::to_string(x) + ".csv";
+        std::ofstream outfile(filepath_with_x, std::ios_base::app);
         Train *t = new Train(x, train_min_len);
         ElementCounts counts = countElements(t);
         outfile  << counts.noPlanks << ";" << counts.noWagons << ";" << counts.noWheels << ";" << counts.noPassengers << ";" << repeat << ";" <<train_min_len << "\n";
+        outfile.close();
         delete t;
     }
 }

@@ -1,14 +1,10 @@
-//
-// Created by Cebulka on 13.01.2024.
-//
 
 #include "combinatorial_train.h"
 #include "alg.h"
 
 Plank::Plank(double x){
-    if(generateBernoulli(WheelGF(x) / (WheelGF((x)) + OneGF(x)) )){
-        //Od A(X)
-        this->wheel = generateCycle(WheelGF(x));
+    if(generateBernoulli(WheelGF(x) / (WheelGF((x)) + EndpointGF(x)) )){
+        this->wheel = generateCycle(x, WheelGF(x));
     }
     else{
         this->wheel = 0;
@@ -16,7 +12,7 @@ Plank::Plank(double x){
 }
 
 Wagon::Wagon(double x) {
-    int len = generateSequence(WagonLengthGF(x),2);
+    int len = generateSequence(x,WagonLengthGF(x),2);
 
     for(int i = 0 ; i < len; i++){
         this->planks.push_back((new Plank(x)));
@@ -28,14 +24,14 @@ Wagon:: ~Wagon(){
 }
 
 Passenger::Passenger(double x) {
-    this->head = generateCycle(HeadGF(x));
-    this->belly = generateCycle(BellyGF(x));
+    this->head = generateCycle(x, HeadGF(x));
+    this->belly = generateCycle(x, BellyGF(x));
 }
 
 WagonWithPassengers::WagonWithPassengers(double x)  {
     this->wagon = new Wagon(x);
 
-    int len = generateSet((NumberOfPassengersGF(x)));
+    int len = generateSet(x,NumberOfPassengersGF(x));
 
     for (int i = 0; i < len; i++){
         this->Passengers.push_back(new Passenger(x));
@@ -53,7 +49,7 @@ WagonWithPassengers::~WagonWithPassengers(){
 Train::Train(double x, int minLen) {
     this->locomotive = new Wagon(x);
 
-    int len = generateSequence((TrainLengthGF(x)),minLen);
+    int len = generateSequence(x,TrainLengthGF(x),minLen);
 
     for (int i = 0; i < len ; i ++){
         this->wagons.push_back(new WagonWithPassengers(x));

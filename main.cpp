@@ -34,15 +34,20 @@ void single_train_test(){
     delete t;
 }
 
-
-int main() {
+void test(){
     double min_x =0.01;
     double max_x = 1.0;
     double step = 0.01;
     int repeat = 1000;
     int train_min_len = 2;
-    std::string filepath = "Results/Test_v1/X=";
+    std::string filepath = "Results/Test_v2/X=";
 
     elements_counter(min_x, max_x, step, repeat, filepath, train_min_len);
+
+}
+
+int main() {
+    single_train_test();
+    //test();
     return 0;
 }
