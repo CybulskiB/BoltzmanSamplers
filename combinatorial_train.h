@@ -1,7 +1,3 @@
-//
-// Created by Cebulka on 13.01.2024.
-//
-
 #ifndef BOLTZMANSAMPLERS_V2_COMBINATORIAL_TRAIN_H
 #define BOLTZMANSAMPLERS_V2_COMBINATORIAL_TRAIN_H
 
@@ -9,36 +5,30 @@
 #include <utility>
 
 struct Plank {
-    //Długosc cyklu /rozmiar kola
-    //wheel == 0 => brak kola
     int wheel;
-    Plank(double x);
+    ~Plank();
 };
 
 struct Wagon{
     std::vector<Plank*> planks;
-    Wagon(double x);
     ~Wagon();
 };
 
 struct Passenger{
-    int head; 
-    int belly; 
-    Passenger(double x);
+    int head;
+    int belly;
+    ~Passenger();
 };
 
 struct WagonWithPassengers{
     Wagon *wagon;
     std::vector<Passenger*> Passengers;
-    WagonWithPassengers(double x);
     ~WagonWithPassengers();
 };
 
 struct Train{
     Wagon* locomotive;
-    std::vector<WagonWithPassengers*> wagons;
-    Train(double x, int minLen);
+    std::vector<WagonWithPassengers*> wagonswithpassengers;
     ~Train();
 };
-
 #endif //BOLTZMANSAMPLERS_V2_COMBINATORIAL_TRAIN_H

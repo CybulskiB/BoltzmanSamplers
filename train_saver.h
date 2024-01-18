@@ -2,7 +2,7 @@
 #define TRAIN_SAVER_H
 
 #include <string>
-#include "combinatorial_train.h"
+#include "boltzmann_samplers.h"
 
 std::string wagonToJson(Wagon* wagon);
 std::string wagonWithPassengersToJson(WagonWithPassengers* wagonWithPassengers);

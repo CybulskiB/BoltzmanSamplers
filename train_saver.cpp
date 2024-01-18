@@ -1,6 +1,6 @@
 #include <fstream>
 #include <sstream>
-#include "combinatorial_train.h"
+#include "boltzmann_samplers.h"
 #include "train_saver.h"
 
 
@@ -51,9 +51,9 @@ std::string wagonWithPassengersToJson(WagonWithPassengers* wagonWithPassengers) 
 std::string trainToJson(Train* train) {
     std::ostringstream ss;
     ss << "{\n\t\"locomotive\": " << wagonToJson(train->locomotive) << ",\n\t\"wagons\": [\n";
-    for (size_t i = 0; i < train->wagons.size(); ++i) {
-        ss << "\t\t" << wagonWithPassengersToJson(train->wagons[i]);
-        if (i != train->wagons.size() - 1) {
+    for (size_t i = 0; i < train->wagonswithpassengers.size(); ++i) {
+        ss << "\t\t" << wagonWithPassengersToJson(train->wagonswithpassengers[i]);
+        if (i != train->wagonswithpassengers.size() - 1) {
             ss << ",";
         }
         ss << "\n";

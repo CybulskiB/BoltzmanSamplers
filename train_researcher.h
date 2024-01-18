@@ -5,7 +5,7 @@
 #ifndef BOLTZMANSAMPLERS_V2_TRAIN_RESEARCHER_H
 #define BOLTZMANSAMPLERS_V2_TRAIN_RESEARCHER_H
 
-#include "combinatorial_train.h"
+#include "boltzmann_samplers.h"
 #include <fstream>
 #include <vector>
 #include <thread>
